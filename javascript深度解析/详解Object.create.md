@@ -4,35 +4,41 @@
 
 照搬一下MDN上的定义：
 
-```javascript
-Object.create(proto,[propertiesObject])
+``` javascript
+Object.create(proto, [propertiesObject])
 ```
-- proto:新创建对象的原型对象
-- propertiesObject:可选。要添加到新对象的可枚举（新添加的属性是其自身的属性，而不是其原型链上的属性）的属性。
+
+* proto: 新创建对象的原型对象
+* propertiesObject: 可选。要添加到新对象的可枚举（新添加的属性是其自身的属性，而不是其原型链上的属性）的属性。
+
 举个例子(恶改了一下MDN的官方例子，看懂的点赞)：
 
-```javascript
+``` javascript
 const car = {
-  isSportsCar: false,
-  introduction: function () {
-    console.log(`Hi girl, this is a ${this.name}. 
-    Do you like to have a drink with me ? ${this.isSportsCar}`);
-  }
+    isSportsCar: false,
+    introduction: function() {
+        console.log( `Hi girl, this is a ${this.name}.Do you like to have a drink with me ? ${this.isSportsCar}` );
+    }
 };
-const porsche = Object.create(car,{
+const porsche = Object.create(car, {
     //color成为porsche的数据属性
     //颜色不喜欢，可以改色或贴膜，所以可修改
-    color:{
-        writable:true,
-        configurable:true,
-        value:'yellow'
+    color: {
+        writable: true,
+        configurable: true,
+        value: 'yellow'
     },
     //type成为porsche的访问器属性
-    type:{
+    type: {
         // writable、configurable等属性，不显式设置则默认为false
         // 想把普通车改成敞篷，成本有点大了，所以就设成不可配置吧
-        get:function(){return 'convertible'},
-        set:function(value){"change this car to",value}
+        get: function() {
+            return 'convertible'
+        },
+        set: function(value) {
+            "change this car to",
+            value
+        }
     }
 });
 
@@ -42,77 +48,83 @@ porsche.isSportsCar = true; // 继承的属性可以被覆写
 porsche.introduction();
 // expected output: "Hi girl, this is a Porsche 911. Do you like to have a drink with me ? true"
 ```
+
+看到这里不知道你是否彻底了解过configurable这个属性，不了解[点击这里](/您不知道的javascript/JS对象configurable为false时改变writable的行为.html)看一下这波骚造作, 与本章没有太大关系，不看也罢！
+
+Object.create()的定义其实很简单，弄清楚上面这个例子就可以了
+
 ## Object.create()、{…}的区别
 
 先看看我们经常使用的{}创建的对象是什么样子的：
 
-
-```javascript
-var o = {a：1};
+``` javascript
+var o = {
+    a： 1
+};
 console.log(o)
 ```
+
 在chrome控制台打印如下：
 
 ![image](https://user-gold-cdn.xitu.io/2018/4/11/162b2eeff41e8f5d?imageView2/0/w/1280/h/960/format/webp/ignore-error/1)
 
-从上图可以看到，新创建的对象继承了`Object`自身的方法，如`hasOwnProperty、toString`等，在新对象上可以直接使用。
+从上图可以看到，新创建的对象继承了 `Object` 自身的方法，如 `hasOwnProperty、toString` 等，在新对象上可以直接使用。
+ 再看看使用 `Object.create()` 创建对象：
 
-再看看使用`Object.create()`创建对象：
-
-```javascript
-var o = Object.create(null,{
-    a:{
-           writable:true,
-        configurable:true,
-        value:'1'
+``` javascript
+var o = Object.create(null, {
+    a: {
+        writable: true,
+        configurable: true,
+        value: '1'
     }
 })
 console.log(o)
-
 ```
 
 在chrome控制台打印如下：
 
-可以看到，新创建的对象除了自身属性a之外，原型链上没有任何属性，也就是没有继承`Object`的任何东西，此时如果我们调用`o.toString()`会报`Uncaught TypeError`的错误。
+![image](/images/QQ截图20191226195528.png)
 
-大家可能会注意到，第一个参数使用了`null`。也就是说将`null`设置成了新创建对象的原型，自然就不会有原型链上的属性。我们再把上面的例子改一改：
+可以看到，新创建的对象除了自身属性a之外，原型链上没有任何属性，也就是没有继承 `Object` 的任何东西，此时如果我们调用 `o.toString()` 会报 `Uncaught TypeError` 的错误。
 
+大家可能会注意到，第一个参数使用了 `null` 。也就是说将 `null` 设置成了新创建对象的原型，自然就不会有原型链上的属性。我们再把上面的例子改一改：
 
-```javascript
-var o = Object.create({},{
-    a:{
-           writable:true,
-        configurable:true,
-        value:'1'
+``` javascript
+var o = Object.create({}, {
+    a: {
+        writable: true,
+        configurable: true,
+        value: '1'
     }
 })
 console.log(o)
 ```
 
-将`null`改为`{}`，结果是怎样的？在chrome控制台打印如下：
+将 `null` 改为 `{}` ，结果是怎样的？在chrome控制台打印如下：
 
 ![image](https://user-gold-cdn.xitu.io/2018/4/11/162b2ef45967219d?imageView2/0/w/1280/h/960/format/webp/ignore-error/1)
 
-我们看到，这样创建的对象和使用`{}`创建对象已经很相近了，但是还是有一点区别：多了一层`proto`嵌套。
+我们看到，这样创建的对象和使用 `{}` 创建对象已经很相近了，但是还是有一点区别：多了一层 `proto` 嵌套。
 
 我们最后再来改一下：
 
-```javascript
-var o = Object.create(Object.prototype,{
-    a:{
-           writable:true,
-        configurable:true,
-        value:'1'
+``` javascript
+var o = Object.create(Object.prototype, {
+    a: {
+        writable: true,
+        configurable: true,
+        value: '1'
     }
 })
 console.log(o)
-
 ```
+
 chrome控制台打印如下：
 
 ![image](https://user-gold-cdn.xitu.io/2018/4/11/162b2ef5f507c834?imageView2/0/w/1280/h/960/format/webp/ignore-error/1)
 
-这次就和使用`{}`创建的对象一模一样了。至此，我相信大家已经对两者的区别十分清楚了。
+这次就和使用 `{}` 创建的对象一模一样了。至此，我相信大家已经对两者的区别十分清楚了。
 
 ## Object.create(null)的使用场景
 
@@ -126,11 +138,9 @@ chrome控制台打印如下：
 
 ![image](https://user-gold-cdn.xitu.io/2018/4/11/162b2ef76658b2f1?imageView2/0/w/1280/h/960/format/webp/ignore-error/1)
 
-从上图可以看到，使用`create`创建的对象，没有任何属性，显示`No properties`，我们可以把它当作一个非常纯净的map来使用，我们可以自己定义`hasOwnProperty、toString`方法，不管是有意还是不小心，我们完全不必担心会将原型链上的同名方法覆盖掉。举个例子：
+从上图可以看到，使用 `create` 创建的对象，没有任何属性，显示 `No properties` ，我们可以把它当作一个非常纯净的map来使用，我们可以自己定义 `hasOwnProperty、toString` 方法，不管是有意还是不小心，我们完全不必担心会将原型链上的同名方法覆盖掉。举个例子：
 
-
-
-```
+``` 
 //Demo1:
 var a= {...省略很多属性和方法...};
 //如果想要检查a是否存在一个名为toString的属性，你必须像下面这样进行检查：
@@ -148,11 +158,12 @@ if(a.toString){}
 
 ```
 
-另一个使用`create(null)`的理由是，在我们使用`for..in`循环的时候会遍历对象原型链上的属性，使用`create(null)`就不必再对属性进行检查了，当然，我们也可以直接使用`Object.keys[]`。
+另一个使用 `create(null)` 的理由是，在我们使用 `for..in` 循环的时候会遍历对象原型链上的属性，使用 `create(null)` 就不必再对属性进行检查了，当然，我们也可以直接使用 `Object.keys[]` 。
 
 ## 总结：
 
-- 你需要一个非常干净且高度可定制的对象当作数据字典的时候；
-- 想节省hasOwnProperty带来的一丢丢性能损失并且可以偷懒少些一点代码的时候
+* 你需要一个非常干净且高度可定制的对象当作数据字典的时候；
+* 想节省hasOwnProperty带来的一丢丢性能损失并且可以偷懒少些一点代码的时候
 
-用`Object.create(null)`吧！其他时候，请用{}。
+用 `Object.create(null)` 吧！其他时候，请用{}。
+

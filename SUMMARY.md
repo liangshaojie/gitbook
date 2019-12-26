@@ -6,3 +6,5 @@
 - 任务清单
     - [日常任务](任务清单/日常任务.md)
     - [一月任务](任务清单/一月任务.md)
+- 您不知道的javascript
+    - [JS对象configurable为false时改变writable的行为](您不知道的javascript/JS对象configurable为false时改变writable的行为.md)
