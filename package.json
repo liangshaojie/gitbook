@@ -1,0 +1,23 @@
+{
+  "name": "gitbook",
+  "description": "介绍自己",
+  "version": "1.0.0",
+  "main": "index.js",
+  "devDependencies": {
+    "chalk": "^3.0.0",
+    "ora": "^4.0.3",
+    "scp2": "^0.5.0"
+  },
+  "scripts": {
+    "dev": "gitbook serve",
+    "deploy": "gitbook build && node ./deploy",
+    "build": "gitbook build"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "gitbook-plugin-anchor-navigation-ex": "^1.0.14",
+    "gitbook-plugin-change_girls": "^2.2.1",
+    "gitbook-plugin-klipse": "^1.2.0"
+  }
+}
