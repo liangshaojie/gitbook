@@ -13,4 +13,6 @@ node.js、egg.js、mongodb、apidoc、nunjucks、gulp
 - [如何编写接口文档(apidoc)](https://apidocjs.com/#param-api)
 - [Egg中使用egg-mongoose和常用的Mongoose方法](https://juejin.im/post/5c3708c26fb9a049f66c509c)
 - [gulp如何配置](https://www.gulpjs.com.cn/docs/api/concepts/)
+- [egg中如何做国际化](https://eggjs.org/zh-cn/core/i18n.html)
+- [如何使用nodemailer发送邮件？](https://segmentfault.com/a/1190000012251328)
 
