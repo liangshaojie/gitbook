@@ -15,4 +15,5 @@ node.js、egg.js、mongodb、apidoc、nunjucks、gulp
 - [gulp如何配置](https://www.gulpjs.com.cn/docs/api/concepts/)
 - [egg中如何做国际化](https://eggjs.org/zh-cn/core/i18n.html)
 - [如何使用nodemailer发送邮件？](https://segmentfault.com/a/1190000012251328)
+- [egg基于jsonwebtoken的Token实现认证机制](https://juejin.im/post/5c170f7ef265da614273ccb1)
 
