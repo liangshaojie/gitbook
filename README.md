@@ -1,24 +1,38 @@
+# 关于自己
+
+择其所爱，爱其所选！半路出家，选择程序员这条漫漫路！自己选择的跪着也要走完...
+
+> 《论语》，曾子曰：“吾日三省吾身”（我每天多次反省自己）。每天进步一点！
+让努力成为一种习惯，让奋斗成为一种享受！ 相信 坚持 的力量！！！
+
+- 学习不打烊，充电加油只为遇到更好的自己，365天无节假日（死磕自己，愉悦大家）。
+- 希望大家在这浮夸的前端圈里，保持冷静，坚持每天花20分钟来学习与思考。
+- 在这千变万化，类库层出不穷的前端，建议大家不要等到找工作时，才狂刷题，提倡每日学习！（不忘初心，html、css、javascript才是基石！）
+- 大家有啥好的建议可以加我微信一起交流讨论！
+
+> 不逼自己一把，不知道自己有多优秀！
+
+
+
 # gitbook归档项目
 
 演示地址： [gitbook归档项目](http://gitbook.liangshaojie.xyz)  
 源码地址： [github地址](https://github.com/liangshaojie/gitbook.git)
 
-# 目录
-- javascript深度解析
-    - [带你走进内存机制](javascript深度解析/带你走进内存机制.md)
-    - [详解Object.create](javascript深度解析/详解Object.create.md)
-    - [4类常见内存泄漏及如何避免](javascript深度解析/4类常见内存泄漏及如何避免.md)
-    - [图解作用域链和闭包](javascript深度解析/图解作用域链和闭包.md)
-    - [5种this绑定全面解析](javascript深度解析/5种this绑定全面解析.md)
-    - [重新认识箭头函数的this](javascript深度解析/重新认识箭头函数的this.md)
-    - [深度解析call和apply原理、使用场景及实现](javascript深度解析/深度解析call和apply原理、使用场景及实现.md)
+*   [x]  一个月写四篇文章发布到gitbook
+*   [x]  每天阅读一篇高质量的技术文章
 
-- 任务清单
-    - [日常任务](任务清单/日常任务.md)
-    - [一月任务](任务清单/一月任务.md)
-- 您不知道的javascript
-    - [JS对象configurable为false时改变writable的行为](您不知道的javascript/JS对象configurable为false时改变writable的行为.md)
-    - [js基础--slice与splice的用法和区别](您不知道的javascript/js基础--slice与splice的用法和区别.md)
+
+- [javascript深度解析](javascript深度解析/目录.md)
+- [阅读笔记](阅读笔记/目录.md)
+
+
+# 一月任务
+- gitbook项目搭建
+- [使用egg完成一个全栈项目（DoraCMS项目）(进行中...)](../项目/DoraCMS项目.md)
+- 有道云笔记迁移到gitbook项目中(进行中...)
+
+
    
 
 

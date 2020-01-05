@@ -1,12 +1,3 @@
-# 一月任务
-- gitbook项目搭建
-- [使用egg完成一个全栈项目（DoraCMS项目）(进行中...)](../项目/DoraCMS项目.md)
-- 有道云笔记迁移到gitbook项目中(进行中...)
-
-# 阅读笔记
-
-## [Docker部署vue项目](https://juejin.im/post/5cce4b1cf265da0373719819)
-
 - [Docker部署vue项目(原文地址)](https://juejin.im/post/5cce4b1cf265da0373719819)
 
 - [win10如何安装docker](https://www.runoob.com/docker/windows-docker-install.html) 
@@ -86,9 +77,3 @@ server {
 ```
 
 最后附上源码地址：https://gitee.com/liangshaojie/dockerVueDemo
-
-
-
-
-
-
