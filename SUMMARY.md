@@ -23,6 +23,7 @@
     - [目录](阅读笔记/目录.md)
     - [Docker部署vue项目](阅读笔记/Docker部署vue项目.md)
     - [Dockerfile中的COPY与ADD命令](阅读笔记/Dockerfile中的COPY与ADD命令.md)
+    - [使用docker-compose构建你的项目](阅读笔记/使用docker-compose构建你的项目.md)
 
 
 
