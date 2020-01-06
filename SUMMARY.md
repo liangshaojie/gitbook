@@ -12,6 +12,7 @@
     - [内存空间详细图解](javascript深度解析/内存空间详细图解.md)
     - [new原理及模拟实现](javascript深度解析/new原理及模拟实现.md)
     - [赋值、浅拷贝和深拷贝的区别](javascript深度解析/赋值、浅拷贝和深拷贝的区别.md)
+    - [Object.assign原理及其实现](javascript深度解析/Object.assign原理及其实现.md)
 - 您不知道的javascript
     - [JS对象configurable为false时改变writable的行为](您不知道的javascript/JS对象configurable为false时改变writable的行为.md)
     - [js基础--slice与splice的用法和区别](您不知道的javascript/js基础--slice与splice的用法和区别.md)
