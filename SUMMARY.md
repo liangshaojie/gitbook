@@ -1,5 +1,6 @@
 * [前言](README.md)
-- javascript深度解析
+
+* javascript深度解析
     - [目录](javascript深度解析/目录.md)
     - [带你走进内存机制](javascript深度解析/带你走进内存机制.md)
     - [详解Object.create](javascript深度解析/详解Object.create.md)
@@ -13,21 +14,20 @@
     - [new原理及模拟实现](javascript深度解析/new原理及模拟实现.md)
     - [赋值、浅拷贝和深拷贝的区别](javascript深度解析/赋值、浅拷贝和深拷贝的区别.md)
     - [Object.assign原理及其实现](javascript深度解析/Object.assign原理及其实现.md)
-- 您不知道的javascript
+* 您不知道的javascript
     - [JS对象configurable为false时改变writable的行为](您不知道的javascript/JS对象configurable为false时改变writable的行为.md)
     - [js基础--slice与splice的用法和区别](您不知道的javascript/js基础--slice与splice的用法和区别.md)
     - [Funciton.prototype.call.bind你知道多少](您不知道的javascript/Funciton.prototype.call.bind你知道多少.md)
-- 项目
+* 项目
     - [DoraCMS项目](项目/DoraCMS项目.md)
 
-- 阅读笔记
+* 阅读笔记
     - [目录](阅读笔记/目录.md)
     - [Docker部署vue项目](阅读笔记/Docker部署vue项目.md)
     - [Dockerfile中的COPY与ADD命令](阅读笔记/Dockerfile中的COPY与ADD命令.md)
     - [使用docker-compose构建你的项目](阅读笔记/使用docker-compose构建你的项目.md)
+    - [深入理解Node.js中的进程与线程](阅读笔记/深入理解Node.js中的进程与线程.md)
 
-
-
-
-- 隐藏目录(用于内部跳转)
+* 隐藏目录(用于内部跳转)
     - [nunjucks自定义一个请求的标签](项目/DoraCMS代码说明/nunjucks自定义一个请求的标签.md)
+
