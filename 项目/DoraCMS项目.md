@@ -21,5 +21,7 @@ node.js、egg.js、mongodb、apidoc、nunjucks、gulp
 - [egg基于jsonwebtoken的Token实现认证机制](https://juejin.im/post/5c170f7ef265da614273ccb1)
 - [什么是JWT以及JWT的构成三部分](https://www.cnblogs.com/marry215464/p/10502066.html)
 - [egg中router 中使用中间件](https://eggjs.org/zh-cn/basics/middleware.html#router-%E4%B8%AD%E4%BD%BF%E7%94%A8%E4%B8%AD%E9%97%B4%E4%BB%B6)
+- [前端微服务实现（singleSpa）](https://juejin.im/post/5dfd8a0c6fb9a0165f490004#heading-16)
+
 
 
