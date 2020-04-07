@@ -23,5 +23,11 @@ node.js、egg.js、mongodb、apidoc、nunjucks、gulp
 - [egg中router 中使用中间件](https://eggjs.org/zh-cn/basics/middleware.html#router-%E4%B8%AD%E4%BD%BF%E7%94%A8%E4%B8%AD%E9%97%B4%E4%BB%B6)
 - [前端微服务实现（singleSpa）](https://juejin.im/post/5dfd8a0c6fb9a0165f490004#heading-16)
 
+- [如何备份数据库](https://juejin.im/post/5d67a44c6fb9a06b112ad259)
+
+- [nodejs使用archive文件压缩](https://www.jianshu.com/p/63e552e539f5)
+
+
+
 
 
