@@ -8,7 +8,6 @@
 - 学习不打烊，充电加油只为遇到更好的自己，365天无节假日（死磕自己，愉悦大家）。
 - 希望大家在这浮夸的前端圈里，保持冷静，坚持每天花20分钟来学习与思考。
 - 在这千变万化，类库层出不穷的前端，建议大家不要等到找工作时，才狂刷题，提倡每日学习！（不忘初心，html、css、javascript才是基石！）
-- 大家有啥好的建议可以加我微信一起交流讨论！
 
 > 不逼自己一把，不知道自己有多优秀！
 
@@ -16,7 +15,7 @@
 
 # gitbook归档项目
 
-演示地址： [gitbook归档项目](http://gitbook.liangshaojie.xyz)  
+演示地址： [gitbook归档项目](http://gitbook.liangshaojie.online)  
 源码地址： [github地址](https://github.com/liangshaojie/gitbook.git)
 
 *   [x]  一个月写四篇文章发布到gitbook
